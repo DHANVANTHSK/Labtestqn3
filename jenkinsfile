@@ -21,9 +21,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                // Pauses execution and asks for user confirmation
                 input message: "Approve deployment of ${env.APP_NAME} version ${env.APP_VERSION}?", ok: 'Release'
-                
                 echo "Deployment approved! Executing application..."
                 sh 'python3 app.py'
             }
