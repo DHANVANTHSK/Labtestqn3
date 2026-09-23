@@ -23,7 +23,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 input message: "Approve deployment of ${env.APP_NAME} version ${env.APP_VERSION}?", ok: 'Release'
-                echo "Deployment approved! Executing application..."
                 bat 'python app.py'
             }
         }
