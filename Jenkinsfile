@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        APP_NAME    = 'InventoryService'
-        APP_VERSION = 'v2.4.0'
+        APP_NAME    = 'Agilelab'
+        APP_VERSION = 'v2.4'
     }
     stages {
         stage('Checkout') {
